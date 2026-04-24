@@ -5,15 +5,12 @@
     "main": "app.js",
     "type": "module",
     "scripts": {
-        "start": "node ."
+        "start": "node app.js"
     },
-  
     "author": "AMCoders",
-   
     "homepage": "https://codecanyon.net/user/amcoders",
     "engines": {
-    "node": ">=18.0.0"
-},
+        "node": ">=18.0.0"
     },
     "dependencies": {
         "baileys": "7.0.0-rc.6",
@@ -33,6 +30,3 @@
         "prettier": "^3.6.2"
     }
 }
-"scripts": {
-    "start": "node app.js"
-},
