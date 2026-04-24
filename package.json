@@ -12,7 +12,8 @@
    
     "homepage": "https://codecanyon.net/user/amcoders",
     "engines": {
-        "node": ">=18.16.0"
+    "node": ">=18.0.0"
+},
     },
     "dependencies": {
         "baileys": "7.0.0-rc.6",
@@ -32,3 +33,6 @@
         "prettier": "^3.6.2"
     }
 }
+"scripts": {
+    "start": "node app.js"
+},
