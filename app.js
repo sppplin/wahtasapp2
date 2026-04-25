@@ -6,8 +6,7 @@ import { init, cleanup } from './whatsapp.js'
 import cors from 'cors'
 
 const app = express()
-const host = process.env.WA_SERVER_HOST || undefined
-const port = parseInt(process.env.PORT ?? process.env.WA_SERVER_PORT ?? 8000)
+const port = parseInt(process.env.PORT ?? 3000)
 
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
@@ -16,14 +15,10 @@ app.use('/', routes)
 
 const listenerCallback = () => {
     init()
-    console.log(`Server is listening on http://${host ? host : 'localhost'}:${port}`)
+    console.log(`Server is listening on port ${port}`)
 }
 
-if (host) {
-    app.listen(port, host, listenerCallback)
-} else {
-    app.listen(port, listenerCallback)
-}
+app.listen(port, '0.0.0.0', listenerCallback)
 
 nodeCleanup(cleanup)
 
